@@ -1,9 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import MyInput from './components/myInput';
 function App() {
-  return <div className='App'></div>;
+  return (
+    <div className='App'>
+      <MyInput type='email' />
+      <MyInput type='number' />
+    </div>
+  );
 }
 
 export default App;
