@@ -14,18 +14,18 @@ export default class myInput extends Component {
     let type = this.props.type;
     if (type === 'email') {
       t = em;
-      text = 'Email';
+      text = 'Email format is incorrect';
       place = 'email';
     } else {
       t = n;
-      text = 'Number';
+      text = 'Mobile format is incorrect';
       place = 'mobile';
     }
     return (
       <div>
         <input
           placeholder={place}
-          onBlur={(e) => {
+          onChange={(e) => {
             this.setState({
               error: !t.test(e.target.value),
             });
